@@ -119,7 +119,7 @@ export default function About() {
           title={"DevOps"}
           progress={40}
           color="yellow"
-          tags={["Docker", "GCP", "Git", "Firebase"]}
+          tags={["Docker", "GCP", "Git", "Firebase", "Jira", "Confluence"]}
         />
       </SimpleGrid>
     </div>
