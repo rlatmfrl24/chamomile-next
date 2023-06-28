@@ -32,7 +32,7 @@ const menuList: MenuItemType[] = [
 const Appbar = () => {
   return (
     <>
-      <div className="flex justify-center items-center px-4 py-2 bg-gray-800 text-white gap-4">
+      <div className="flex justify-center items-center px-4 py-2 bg-gray-800 text-white gap-4 absolute w-full">
         {menuList.map((item) => (
           <div key={item.id}>
             <Link href={item.path}>{item.name}</Link>

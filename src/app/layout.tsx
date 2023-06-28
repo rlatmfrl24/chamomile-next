@@ -22,8 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={roboto.className + ` min-h-screen flex flex-col`}>
         <Providers>
-          <Appbar />
           {children}
+          <Appbar />
         </Providers>
       </body>
     </html>
