@@ -27,6 +27,10 @@ import {
   WrapItem,
   UnorderedList,
   ListItem,
+  Stat,
+  StatLabel,
+  StatNumber,
+  StatHelpText,
 } from "@chakra-ui/react";
 import ReactPageScroller from "react-page-scroller";
 import { NextPage } from "next";
@@ -34,6 +38,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 import { MdWork } from "react-icons/md";
+import { format, intervalToDuration } from "date-fns";
 
 const SkillCard: NextPage<{
   title: string;
@@ -76,6 +81,11 @@ export default function About() {
   const handlePageChange = (number: number) => {
     setCurrentPage(number);
   };
+
+  const CareerDuration = intervalToDuration({
+    start: new Date("2017-01-01"),
+    end: new Date(),
+  });
 
   const steps = [
     {
@@ -248,57 +258,65 @@ export default function About() {
             </Text>
           </Text>
         </motion.div>
-        <Stepper
-          index={activeStep}
-          orientation="vertical"
-          colorScheme="whiteAlpha"
-          gap={0}
-          mt={10}
-        >
-          {steps.map((step, index) => (
-            <Step key={index}>
-              <StepIndicator>
-                <StepStatus
-                  complete={<StepIcon />}
-                  incomplete={<StepNumber />}
-                  active={<Icon as={MdWork} color={"white"} />}
-                />
-              </StepIndicator>
-              <Box flexShrink={0} mb={6} ml={1}>
-                <StepTitle>
-                  <Text
-                    color={"white"}
-                    fontWeight={"bold"}
-                    fontSize={"3xl"}
-                    className="-translate-y-2"
-                  >
-                    {step.title}
-                  </Text>
-                </StepTitle>
-                <StepDescription>
-                  <Text color={"white"} fontSize={"xl"}>
-                    {step.role}
-                  </Text>
-                  <Stack>
-                    {step.startDate !== "" && (
-                      <Text color={"white"}>
-                        {step.startDate} ~ {step.endDate}
+        <Box display={"flex"} flex={1} alignItems={"center"}>
+          <Box display={"flex"} flexDirection={"column"}>
+            <Stepper
+              index={activeStep}
+              orientation="vertical"
+              colorScheme="whiteAlpha"
+              gap={0}
+              mt={10}
+            >
+              {steps.map((step, index) => (
+                <Step key={index}>
+                  <StepIndicator>
+                    <StepStatus
+                      complete={<StepIcon />}
+                      incomplete={<StepNumber />}
+                      active={<Icon as={MdWork} color={"white"} />}
+                    />
+                  </StepIndicator>
+                  <Box flexShrink={0} mb={6} ml={1}>
+                    <StepTitle>
+                      <Text
+                        color={"white"}
+                        fontWeight={"bold"}
+                        fontSize={"3xl"}
+                        className="-translate-y-2"
+                      >
+                        {step.title}
                       </Text>
-                    )}
-                    <UnorderedList my={3}>
-                      {step.description.map((desc, index) => (
-                        <ListItem key={index} color={"white"} fontSize={"lg"}>
-                          {desc}
-                        </ListItem>
-                      ))}
-                    </UnorderedList>
-                  </Stack>
-                </StepDescription>
-              </Box>
-              <StepSeparator />
-            </Step>
-          ))}
-        </Stepper>
+                    </StepTitle>
+                    <StepDescription>
+                      <Text color={"white"} fontSize={"xl"}>
+                        {step.role}
+                      </Text>
+                      <Stack>
+                        {step.startDate !== "" && (
+                          <Text color={"white"}>
+                            {step.startDate} ~ {step.endDate}
+                          </Text>
+                        )}
+                        <UnorderedList my={3}>
+                          {step.description.map((desc, index) => (
+                            <ListItem
+                              key={index}
+                              color={"white"}
+                              fontSize={"md"}
+                            >
+                              {desc}
+                            </ListItem>
+                          ))}
+                        </UnorderedList>
+                      </Stack>
+                    </StepDescription>
+                  </Box>
+                  <StepSeparator />
+                </Step>
+              ))}
+            </Stepper>
+          </Box>
+        </Box>
       </div>
     </ReactPageScroller>
   );
