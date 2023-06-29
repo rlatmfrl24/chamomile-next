@@ -103,24 +103,27 @@ const ProjectCard: NextPage<ProjectInfoType> = (info) => {
 
 export default function Project() {
   return (
-    <div className="bg-slate-900 flex flex-col p-24 h-0 flex-auto overflow-auto">
-      <Heading color={"white"}>Project</Heading>
-      <SimpleGrid columns={2} spacing={10} mt={10}>
-        {ProjectList.map((project) => (
-          <ProjectCard
-            pid={project.pid}
-            key={project.title}
-            title={project.title}
-            organization={project.organization}
-            type={project.type}
-            description_en={project.description_en}
-            description_kr={project.description_kr}
-            summary_kr={project.summary_kr}
-            startDate={project.startDate}
-            endDate={project.endDate}
-          />
-        ))}
-      </SimpleGrid>
+    <div className="bg-slate-900 flex justify-center p-24 h-0 flex-auto overflow-auto">
+      <Stack gap={4}>
+        <Heading color={"white"}>Project</Heading>
+        <Divider />
+        <SimpleGrid columns={2} spacing={10} pt={10} pb={24}>
+          {ProjectList.map((project) => (
+            <ProjectCard
+              pid={project.pid}
+              key={project.title}
+              title={project.title}
+              organization={project.organization}
+              type={project.type}
+              description_en={project.description_en}
+              description_kr={project.description_kr}
+              summary_kr={project.summary_kr}
+              startDate={project.startDate}
+              endDate={project.endDate}
+            />
+          ))}
+        </SimpleGrid>
+      </Stack>
     </div>
   );
 }
