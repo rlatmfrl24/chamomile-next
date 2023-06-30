@@ -111,7 +111,7 @@ export default function Project() {
           {ProjectList.map((project) => (
             <ProjectCard
               pid={project.pid}
-              key={project.title}
+              key={project.pid}
               title={project.title}
               organization={project.organization}
               type={project.type}

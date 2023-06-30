@@ -23,7 +23,7 @@ const menuList: MenuItemType[] = [
     path: "/blog",
   },
   {
-    id: 4,
+    id: 5,
     name: "Contact",
     path: "/contact",
   },
