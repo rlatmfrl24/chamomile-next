@@ -4,7 +4,6 @@ import {
   Box,
   Card,
   CardBody,
-  Divider,
   Heading,
   Icon,
   Image,
@@ -20,17 +19,12 @@ import {
   StepStatus,
   StepTitle,
   Stepper,
-  useSteps,
   Tag,
   Text,
   Wrap,
   WrapItem,
   UnorderedList,
   ListItem,
-  Stat,
-  StatLabel,
-  StatNumber,
-  StatHelpText,
 } from "@chakra-ui/react";
 import ReactPageScroller from "react-page-scroller";
 import { NextPage } from "next";
@@ -205,14 +199,22 @@ const ScrollGuideComponent: NextPage<{
   variant: "up" | "down";
   target: string;
 }> = ({ variant, target }) => {
+  let motionDirection = variant === "up" ? -10 : 10;
+
   return (
     <motion.div
       className="flex flex-col items-center gap-2"
       animate={{
-        y: [0, 10, 0],
+        y: [0, motionDirection, 0],
       }}
       transition={{ duration: 1.5, repeat: Infinity }}
     >
+      <Icon
+        as={HiOutlineChevronDoubleDown}
+        className={`text-white rotate-180 ${
+          variant === "up" ? "visible" : "invisible"
+        }`}
+      />
       <Text as="div" color={"white"} display={"flex"}>
         Scroll {variant === "up" ? "up" : "down"} to
         <Text ml={1} fontWeight={"bold"}>
@@ -221,7 +223,7 @@ const ScrollGuideComponent: NextPage<{
       </Text>
       <Icon
         as={HiOutlineChevronDoubleDown}
-        className={`text-white ${variant === "up" ? "rotate-180" : ""}`}
+        className={`text-white ${variant === "up" ? "invisible" : "visible"}`}
       />
     </motion.div>
   );
