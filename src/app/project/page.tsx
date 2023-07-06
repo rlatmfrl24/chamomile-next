@@ -8,6 +8,7 @@ import {
   CardBody,
   CardHeader,
   Divider,
+  Flex,
   Heading,
   Link,
   SimpleGrid,
@@ -25,31 +26,31 @@ const ProjectCard: NextPage<ProjectInfoType> = (info) => {
     switch (type) {
       case ProjectType.General:
         return (
-          <Badge colorScheme="green" width={"fit-content"}>
+          <Badge key={type} colorScheme="green" width={"fit-content"}>
             General
           </Badge>
         );
       case ProjectType.Backend:
         return (
-          <Badge colorScheme="red" width={"fit-content"}>
+          <Badge key={type} colorScheme="red" width={"fit-content"}>
             Backend
           </Badge>
         );
       case ProjectType.Frontend:
         return (
-          <Badge colorScheme="blue" width={"fit-content"}>
+          <Badge key={type} colorScheme="blue" width={"fit-content"}>
             Frontend
           </Badge>
         );
       case ProjectType.Android:
         return (
-          <Badge colorScheme="purple" width={"fit-content"}>
+          <Badge key={type} colorScheme="purple" width={"fit-content"}>
             Android
           </Badge>
         );
       case ProjectType.ETC:
         return (
-          <Badge colorScheme="yellow" width={"fit-content"}>
+          <Badge key={type} colorScheme="yellow" width={"fit-content"}>
             ETC
           </Badge>
         );
@@ -69,11 +70,11 @@ const ProjectCard: NextPage<ProjectInfoType> = (info) => {
       >
         <CardHeader>
           <Stack>
-            <Box display={"flex"} alignItems={"center"} gap={2}>
+            <Flex alignItems={"center"} gap={2}>
               {info.type.map((type) => ProjectBadgeProvider(type))}
-            </Box>
+            </Flex>
             <Heading color={"white"}>{info.title}</Heading>
-            <Box display={"flex"} alignItems={"center"} gap={2}>
+            <Flex alignItems={"center"} gap={2}>
               <Text color={"white"}>{info.organization}</Text>
               {info.startDate === undefined || info.endDate === undefined ? (
                 <></>
@@ -88,7 +89,7 @@ const ProjectCard: NextPage<ProjectInfoType> = (info) => {
                   </Text>
                 </>
               )}
-            </Box>
+            </Flex>
           </Stack>
         </CardHeader>
         <CardBody>

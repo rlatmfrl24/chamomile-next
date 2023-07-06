@@ -25,6 +25,7 @@ import {
   WrapItem,
   UnorderedList,
   ListItem,
+  Flex,
 } from "@chakra-ui/react";
 import ReactPageScroller from "react-page-scroller";
 import { NextPage } from "next";
@@ -242,7 +243,7 @@ export default function About() {
       animationTimer={700}
     >
       <div className="bg-slate-900 flex flex-col justify-between items-center p-16 h-full">
-        <Box display={"flex"} flex={1} gap={10} className="items-center">
+        <Flex flex={1} gap={10} className="items-center">
           <Stack className="flex justify-end items-center">
             <Image
               objectFit={"contain"}
@@ -261,7 +262,7 @@ export default function About() {
               Seoul, Korea
             </Text>
           </Stack>
-        </Box>
+        </Flex>
         <ScrollGuideComponent variant="down" target="Skill" />
       </div>
       <div className="bg-slate-900 flex flex-col justify-between items-center p-24 h-full">
