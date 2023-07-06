@@ -116,8 +116,6 @@ export default function Project() {
               title={project.title}
               organization={project.organization}
               type={project.type}
-              description_en={project.description_en}
-              description_kr={project.description_kr}
               summary_kr={project.summary_kr}
               startDate={project.startDate}
               endDate={project.endDate}

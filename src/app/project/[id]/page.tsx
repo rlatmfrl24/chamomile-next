@@ -4,6 +4,7 @@ import {
   AspectRatio,
   Box,
   Container,
+  Divider,
   Flex,
   Heading,
   Image,
@@ -15,6 +16,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { format } from "date-fns";
 
 const ProjectPreview = () => {
   return (
@@ -57,11 +59,38 @@ export default function ProjectDetail({
   return (
     <div className="bg-slate-900 flex flex-col p-24 flex-1">
       <Container maxW={"container.lg"}>
-        <ProjectPreview />
-        <Heading color={"white"}>
-          {projectData === undefined ? "Not Found" : projectData.title}
-        </Heading>
-        <Stack></Stack>
+        <Stack>
+          <ProjectPreview />
+          <Heading color={"white"} my={3}>
+            {projectData === undefined ? "Not Found" : projectData.title}
+          </Heading>
+          <Heading color={"white"} fontSize={"xl"}>
+            프로젝트 개요
+          </Heading>
+          <Text color={"white"}>
+            {projectData === undefined ? "Not Found" : projectData.summary_kr}
+          </Text>
+          <Heading color={"white"} fontSize={"xl"}>
+            프로젝트 참여 기간
+          </Heading>
+          {projectData?.startDate === undefined ||
+          projectData?.endDate === undefined ? (
+            <></>
+          ) : (
+            <Text color={"white"}>
+              {projectData === undefined
+                ? "Not Found"
+                : `${format(projectData.startDate, "yyyy-MM")} ~ ${format(
+                    projectData.endDate,
+                    "yyyy-MM"
+                  )}`}
+            </Text>
+          )}
+          <Heading color={"white"} fontSize={"xl"}>
+            담당 업무
+          </Heading>
+          <Text color={"white"}></Text>
+        </Stack>
       </Container>
     </div>
   );

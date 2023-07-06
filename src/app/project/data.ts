@@ -1,61 +1,115 @@
-import { ProjectInfoType, ProjectType } from "@/lib/typeDef";
+import { ProjectInfoDetailType, ProjectType } from "@/lib/typeDef";
 
-const ProjectList: ProjectInfoType[] = [
+const ProjectList: ProjectInfoDetailType[] = [
   {
     pid: "freight9",
     type: [ProjectType.Frontend, ProjectType.Android],
     title: "Freight9",
     organization: "Cyberlogitec",
-    description_kr: "",
-    description_en: "",
     summary_kr: "해운 물류 포워딩 플랫폼 프로젝트",
+    description_kr:
+      "해운 물류 환경에서 이뤄지는 포워딩을 업무를 지원하는 플랫폼 개발 프로젝트. 선박 Booking 및 컨테이너 관리를 포함한 다양한 업무를 개선된 UI/UX로 지원하는 프로젝트",
     startDate: new Date("2018-10-01"),
     endDate: new Date("2021-04-01"),
+    role: [
+      `Login/Signup, Forgot Password, Booking, MarketPlace Android 화면 개발 담당`,
+      `MarketPlace Service를 활용한 모의 거래 서비스 구축 담당`,
+      `Android/Web 관련 형상관리 담당`,
+    ],
+    skill: [
+      `MVVM 패턴을 활용한 Android 화면 개발`,
+      `Retrofit2, OkhttpClient를 활용한 REST API용 통신 모듈 구성`,
+      `Lifecycle, LiveData, DataBinding과 같은 Android Jetpack 라이브러리 활용`,
+      `Dagger2를 활용한 의존성 주입`,
+      `ListAdapter를 활용한 RecyclerView 구성`,
+      `ViewPager, Treeview 등 다양한 Android UI 구현`,
+      `Lottie를 활용한 애니메이션 구현`,
+      `Room을 활용한 로컬 DB 구성`,
+      `Firebase를 활용한 Push Notification 구현`,
+      `React.js를 활용한 Web 화면 개발`,
+      `MobX를 활용한 React.js 상태 관리`,
+      `Selenium을 활용한 E2E 테스트 자동화`,
+    ],
   },
   {
     pid: "allegro",
     type: [ProjectType.Frontend],
     title: "Allegro",
     organization: "Cyberlogitec",
-    description_kr: "",
-    description_en: "",
+    description_kr:
+      "해운 프로세스의 Digital Transportation을 지향하는 운영 솔루션 프로젝트. 컨테이너 자원 관리 및 화물 수익성 관리 최적화를 지원하는 회사의 주요 솔루션에 대한 Refactoring 프로젝트",
     summary_kr: "컨테이너 자원 관리 및 화물 수익성 최적화 솔루션 프로젝트",
     startDate: new Date("2023-03-01"),
     endDate: new Date(),
+    role: [`대표 UI Frontend 개발 담당`, `React.js UI Library 개발 담당`],
+    skill: [
+      `Bootstrap을 적용한 UI 개발`,
+      `Next.js를 활용한 Frontend 및 UI Library 개발`,
+      `Tailwind CSS를 활용한 UI 개발`,
+      `Zustand를 활용한 React.js 상태 관리`,
+      `Firebase를 활용한 Library 배포`,
+    ],
   },
   {
     pid: "logichain-imdg",
     type: [ProjectType.Android],
     title: "Logichain-IMDG",
     organization: "Cyberlogitec",
-    description_kr: "",
-    description_en: "",
+    description_kr:
+      "선박 터미널에 들어오는 컨테이너를 대상으로 수행되는 Blockchain 개념을 도입한 위험물 검사 신청 시스템 개발",
     summary_kr: "블록체인 기반 컨테이너 위험물 검사 신청 시스템 프로젝트",
     startDate: new Date("2020-09-01"),
     endDate: new Date("2020-12-01"),
+    role: [
+      `화주, 검사원, 고객용 Android App 개발 담당`,
+      `블록체인 Mainnet 연동 및 테스트 담당`,
+    ],
+    skill: [
+      `MVVM 패턴을 활용한 Android 화면 개발`,
+      `Retrofit2, OkhttpClient를 활용한 블록체인 Mainnet 통신 모듈 구성`,
+      `Koin을 활용한 의존성 주입`,
+      `Dexter를 활용한 Permission 관리`,
+      `Room을 활용한 로컬 DB 구성 및 내부 검색 모듈 구현`,
+    ],
   },
   {
     pid: "container-mnr",
     type: [ProjectType.Android],
     title: "Container M&R Project",
     organization: "Cyberlogitec",
-    description_kr: "",
-    description_en: "",
+    description_kr:
+      "컨테이너 유지보수 센터에 입고되는 컨테이너를 인식 넘버를 촬용한 이미지에 문자인식을 수행하여 컨테이너 정보를 자동 입력하고, 수리 내역 및 입고 상황을 관리해주는 솔루션 개발 프로젝트",
     summary_kr:
       "문자 이미지 인식을 활용한 컨테이너 유지보수 관리 시스템 프로젝트",
     startDate: new Date("2021-05-01"),
     endDate: new Date("2022-02-01"),
+    role: [
+      `Android App 개발 담당`,
+      `문자 이미지 인식 모듈 개발 담당(ConPDS 라이브러리 활용)`,
+      `Firebase를 활용한 Push Notification 구현`,
+    ],
+    skill: [
+      `MVVM 패턴을 활용한 Android 화면 개발`,
+      `Retrofit2, OkhttpClient를 활용한 REST API용 통신 모듈 구성`,
+      `Lifecycle, LiveData, DataBinding과 같은 Android Jetpack 라이브러리 활용`,
+      `Google GMS를 활용한 사용자 위치 정보 수집 및 활용 모듈 구성`,
+      `Dexter를 활용한 Permission 관리`,
+      `Firebase를 활용한 Push Notification 구현`,
+      `Room을 활용한 로컬 DB 구성`,
+    ],
   },
   {
     pid: "allegro-esvc",
     type: [ProjectType.Frontend],
     title: "Allegro E-Service",
     organization: "Cyberlogitec",
-    description_kr: "",
-    description_en: "",
+    description_kr:
+      "선사의 업무를 지원하는 통합 운영 솔루션인 Allegro E-Service 개선 사업. 기존 한진해운의 Spring-Boot 기반의 Legacy System의 UI 개선 및 Flat Data의 DT 전환",
     summary_kr: "선사 업무 지원용 솔루션 프로젝트",
     startDate: new Date("2022-03-01"),
     endDate: new Date("2022-09-01"),
+    role: [],
+    skill: [],
   },
   {
     pid: "one-modernization",
@@ -63,11 +117,12 @@ const ProjectList: ProjectInfoType[] = [
     title: "Ocean Network Express Modernization",
     organization: "Cyberlogitec",
     description_kr: "",
-    description_en: "",
     summary_kr:
       "ONE 그룹 전용 Shipping Monitoring/Forwarding 솔루션 재설계 프로젝트",
     startDate: new Date("2022-09-01"),
     endDate: new Date("2023-05-01"),
+    role: [],
+    skill: [],
   },
   {
     pid: "opus-terminal",
@@ -75,11 +130,12 @@ const ProjectList: ProjectInfoType[] = [
     title: "OPUS Terminal",
     organization: "Cyberlogitec",
     description_kr: "",
-    description_en: "",
     summary_kr:
       "선박 터미널의 선적, 하역, 분류 및 보관 관리용 통합 솔루션 프로젝트",
     startDate: new Date("2023-01-01"),
     endDate: new Date("2023-03-01"),
+    role: [],
+    skill: [],
   },
 
   {
@@ -87,12 +143,13 @@ const ProjectList: ProjectInfoType[] = [
     type: [ProjectType.General],
     title: "RABIT A-KEYBOARD",
     organization: "Phill-IT",
-    description_en: "",
     description_kr: "",
     summary_kr:
       "다국어 언어 지원 및 자동 추천/교정 기능을 지원하는 안드로이드용 가상 키보드 솔루션",
     startDate: new Date("2017-02-01"),
     endDate: new Date("2018-09-01"),
+    role: [],
+    skill: [],
   },
   {
     pid: "dont-panic",
@@ -100,11 +157,12 @@ const ProjectList: ProjectInfoType[] = [
     title: "Don't Panic",
     organization: "Hyundai Cradle",
     description_kr: "",
-    description_en: "",
     summary_kr:
       "비대면 온라인 교육 환경 개선을 위한 메타버스 코딩 플랫폼 프로젝트",
     startDate: new Date("2021-10-01"),
     endDate: new Date("2021-11-01"),
+    role: [],
+    skill: [],
   },
   {
     pid: "applemint",
@@ -112,8 +170,9 @@ const ProjectList: ProjectInfoType[] = [
     title: "Applemint",
     organization: "Personal Project",
     description_kr: "",
-    description_en: "",
     summary_kr: "웹 사이트 크롤링을 활용한 게시물 피드 서비스",
+    role: [],
+    skill: [],
   },
   {
     pid: "craftman-bartender",
@@ -121,8 +180,9 @@ const ProjectList: ProjectInfoType[] = [
     title: "Craftman Bartender",
     organization: "Personal Project",
     description_kr: "",
-    description_en: "",
     summary_kr: "조주기능사 실기시험 모의테스트 연습용 안드로이드 앱",
+    role: [],
+    skill: [],
   },
   {
     pid: "meerkat",
@@ -130,18 +190,21 @@ const ProjectList: ProjectInfoType[] = [
     title: "Meerkat",
     organization: "Personal Project",
     description_kr: "",
-    description_en: "",
     summary_kr:
       "RSS 피드를 통해 수집한 뉴스 키워드와 연관된 주식과 영향도를 보여주는 서비스",
+    role: [],
+    skill: [],
   },
+
   {
     pid: "barbambar",
     type: [ProjectType.Frontend],
     title: "Barbambar",
     organization: "Personal Project",
     description_kr: "",
-    description_en: "",
     summary_kr: "바밤바 프로모션 페이지",
+    role: [],
+    skill: [],
   },
 ];
 

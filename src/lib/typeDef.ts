@@ -11,9 +11,13 @@ export interface ProjectInfoType {
   startDate?: Date;
   endDate?: Date;
   summary_kr: string;
-  description_en: string;
-  description_kr: string;
   type: ProjectType[];
+}
+
+export interface ProjectInfoDetailType extends ProjectInfoType {
+  description_kr: string;
+  role: string[];
+  skill: string[];
 }
 
 export enum ProjectType {
