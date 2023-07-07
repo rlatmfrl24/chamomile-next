@@ -18,6 +18,12 @@ export interface ProjectInfoDetailType extends ProjectInfoType {
   description_kr: string;
   role: string[];
   skill: string[];
+  links?: {
+    github?: string;
+    playstore?: string;
+    appstore?: string;
+    website?: string;
+  };
 }
 
 export enum ProjectType {
