@@ -14,13 +14,21 @@ export default function ProjectDetail({
   const projectData: ProjectInfoDetailType | undefined = ProjectList.find(
     (project) => project.pid === params.id
   );
+  let imagePaths: string[] = [];
 
-  // get image pathes from public folder
-  const imagePaths = fs
-    .readdirSync(
+  // check if project image folder exists
+  if (
+    fs.existsSync(
       path.join(process.cwd(), "public", "screenshot", projectData?.pid || "")
     )
-    .map((path) => `/screenshot/${projectData?.pid}/${path}`);
+  ) {
+    // get image pathes from public folder
+    imagePaths = fs
+      .readdirSync(
+        path.join(process.cwd(), "public", "screenshot", projectData?.pid || "")
+      )
+      .map((path) => `/screenshot/${projectData?.pid}/${path}`);
+  }
 
   return (
     <div className="bg-slate-900 flex flex-col p-24 flex-1">
