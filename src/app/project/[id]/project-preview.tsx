@@ -1,5 +1,3 @@
-"use client";
-
 import { NextPage } from "next";
 import { AspectRatio, Box, Flex, Image } from "@chakra-ui/react";
 import { register } from "swiper/element/bundle";
