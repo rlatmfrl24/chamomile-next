@@ -18,9 +18,10 @@ const ProjectInfo: NextPage<{
           <Heading
             color={"white"}
             fontSize={"5xl"}
-            className="flex items-center"
+            className="flex items-center justify-center relative"
           >
             <IconButton
+              className="absolute left-0"
               colorScheme="white"
               aria-label="Back to project list"
               fontSize={"4xl"}
@@ -29,9 +30,7 @@ const ProjectInfo: NextPage<{
                 window.history.back();
               }}
             />
-            <Text className="flex-1 flex justify-center">
-              {data === undefined ? "Not Found" : data.title}
-            </Text>
+            {data === undefined ? "Not Found" : data.title}
           </Heading>
           <ProjectPreview thumbs={thumbs} />
 
