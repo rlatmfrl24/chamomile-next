@@ -1,7 +1,15 @@
 "use client";
 
 import { ProjectInfoDetailType } from "@/lib/typeDef";
-import { Container, Heading, IconButton, Stack, Text } from "@chakra-ui/react";
+import {
+  Container,
+  Heading,
+  IconButton,
+  ListItem,
+  Stack,
+  Text,
+  UnorderedList,
+} from "@chakra-ui/react";
 import { format } from "date-fns";
 import { NextPage } from "next";
 import ProjectPreview from "./project-preview";
@@ -32,37 +40,59 @@ const ProjectInfo: NextPage<{
             />
             {data === undefined ? "Not Found" : data.title}
           </Heading>
-          <ProjectPreview thumbs={thumbs} />
+          {thumbs.length === 0 ? <></> : <ProjectPreview thumbs={thumbs} />}
 
-          <Heading color={"white"} fontSize={"xl"}>
-            프로젝트 개요
-          </Heading>
+          <InfoHeading>프로젝트 설명</InfoHeading>
           <Text color={"white"}>
-            {data === undefined ? "Not Found" : data.summary_kr}
+            {data === undefined ? "Not Found" : data.description_kr}
           </Text>
-          <Heading color={"white"} fontSize={"xl"}>
-            프로젝트 참여 기간
-          </Heading>
+          <InfoHeading>참여 기간</InfoHeading>
           {data?.startDate === undefined || data?.endDate === undefined ? (
             <></>
           ) : (
             <Text color={"white"}>
               {data === undefined
                 ? "Not Found"
-                : `${format(data.startDate, "yyyy-MM")} ~ ${format(
+                : `${format(data.startDate, "yyyy년 MM월")} ~ ${format(
                     data.endDate,
-                    "yyyy-MM"
-                  )}`}
+                    "yyyy년 MM월"
+                  )} ()`}
             </Text>
           )}
-          <Heading color={"white"} fontSize={"xl"}>
-            담당 업무
-          </Heading>
-          <Text color={"white"}></Text>
+          <InfoHeading>담당 업무</InfoHeading>
+          <UnorderedList>
+            {data?.role === undefined ? (
+              <></>
+            ) : (
+              data.role.map((role, index) => (
+                <ListItem key={index} color={"white"}>
+                  {role}
+                </ListItem>
+              ))
+            )}
+          </UnorderedList>
+          <InfoHeading>사용 기술</InfoHeading>
+          <UnorderedList>
+            {data?.skill === undefined ? (
+              <></>
+            ) : (
+              data.skill.map((role, index) => (
+                <ListItem key={index} color={"white"}>
+                  {role}
+                </ListItem>
+              ))
+            )}
+          </UnorderedList>
         </>
       </Stack>
     </Container>
   );
 };
+
+const InfoHeading = ({ children }: { children: React.ReactNode }) => (
+  <Heading color={"white"} fontSize={"xl"} mt={3}>
+    {children}
+  </Heading>
+);
 
 export default ProjectInfo;
