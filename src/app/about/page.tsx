@@ -242,7 +242,7 @@ export default function About() {
       customPageNumber={currentPage}
       animationTimer={700}
     >
-      <div className="bg-slate-900 flex flex-col justify-between items-center p-16 h-full">
+      <div className="bg-slate-900 flex flex-col justify-between items-center p-16 h-full min-h-fit overflow-auto">
         <Flex flex={1} gap={10} className="items-center">
           <Stack className="flex justify-end items-center">
             <Image
@@ -265,12 +265,12 @@ export default function About() {
         </Flex>
         <ScrollGuideComponent variant="down" target="Skill" />
       </div>
-      <div className="bg-slate-900 flex flex-col justify-between items-center p-24 h-full">
+      <div className="bg-slate-900 flex flex-col justify-between items-center p-24 h-full min-h-fit overflow-auto">
         <ScrollGuideComponent variant="up" target="Profile" />
         <SkillPage />
         <ScrollGuideComponent variant="down" target="Career" />
       </div>
-      <div className="bg-slate-900 flex flex-col justify-between items-center p-24 h-full">
+      <div className="bg-slate-900 flex flex-col justify-between items-center p-24 h-full min-h-fit overflow-auto">
         <ScrollGuideComponent variant="up" target="Skill" />
         <CareerPage />
       </div>
