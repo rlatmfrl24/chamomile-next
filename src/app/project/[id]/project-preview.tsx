@@ -19,7 +19,9 @@ const ProjectPreview: NextPage<{
         autoplay
         style={
           {
+            "--swiper-navigation-color": "#fff",
             "--swiper-navigation-size": "24px",
+            "--swiper-pagination-color": "#fff",
             "--swiper-pagination-bullet-inactive-color": "#fff",
           } as CSSProperties
         }
