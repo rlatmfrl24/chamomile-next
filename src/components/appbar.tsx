@@ -47,7 +47,7 @@ const Appbar = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center px-4 py-2 bg-gray-800 text-white gap-8 absolute w-full z-50">
+      <div className="flex justify-center items-center px-4 py-2 bg-gray-800 text-white gap-8 w-full z-50">
         {menuList.map((item) => (
           <div key={item.id}>
             <Link

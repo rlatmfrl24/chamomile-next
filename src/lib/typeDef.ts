@@ -20,8 +20,6 @@ export interface ProjectInfoDetailType extends ProjectInfoType {
   skill: string[];
   links?: {
     github?: string;
-    playstore?: string;
-    appstore?: string;
     website?: string;
   };
 }

@@ -8,7 +8,11 @@ const ProjectPreview: NextPage<{
   thumbs: string[];
 }> = ({ thumbs }) => {
   return (
-    <AspectRatio ratio={16 / 9}>
+    <AspectRatio
+      height={"fit-content"}
+      width={"fit-content"}
+      minWidth={"container.md"}
+    >
       <swiper-container
         navigation
         pagination

@@ -31,7 +31,7 @@ export default function ProjectDetail({
   }
 
   return (
-    <div className="bg-slate-900 p-24 flex flex-col flex-auto h-0 overflow-auto">
+    <div className="bg-slate-900 flex justify-center h-0 flex-auto overflow-auto">
       <ProjectInfo data={projectData} thumbs={imagePaths} />
     </div>
   );
