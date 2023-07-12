@@ -1,5 +1,8 @@
+"use client";
+
 import { MenuItemType } from "@/lib/typeDef";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const menuList: MenuItemType[] = [
   {
@@ -23,19 +26,39 @@ const menuList: MenuItemType[] = [
     path: "/blog",
   },
   {
-    id: 4,
+    id: 5,
     name: "Contact",
     path: "/contact",
   },
 ];
 
 const Appbar = () => {
+  const [currentMenu, setCurrentMenu] = useState<number>(1);
+
+  useEffect(() => {
+    const path = window.location.pathname;
+    const firstDepth = "/" + path.split("/")[1];
+
+    const menu = menuList.find((item) => item.path === firstDepth);
+    if (menu !== undefined) {
+      setCurrentMenu(menu.id);
+    }
+  }, []);
+
   return (
     <>
-      <div className="flex justify-center items-center px-4 py-2 bg-gray-800 text-white gap-4">
+      <div className="flex justify-center items-center px-4 py-2 bg-gray-800 text-white gap-8 w-full z-50">
         {menuList.map((item) => (
           <div key={item.id}>
-            <Link href={item.path}>{item.name}</Link>
+            <Link
+              href={item.path}
+              className={` ${currentMenu === item.id ? "text-blue-400 " : ""}`}
+              onClick={() => {
+                setCurrentMenu(item.id);
+              }}
+            >
+              {item.name}
+            </Link>
           </div>
         ))}
       </div>

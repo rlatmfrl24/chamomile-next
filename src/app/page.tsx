@@ -5,7 +5,7 @@ import NextLink from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col flex-1 bg-slate-900">
+    <main className="flex flex-col flex-1 bg-slate-900 overflow-auto">
       <div className="flex flex-1 justify-center items-center p-3 gap-10">
         <div>TBU</div>
         <div className="flex flex-col gap-3">
