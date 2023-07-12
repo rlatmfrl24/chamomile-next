@@ -70,7 +70,14 @@ const ProjectCard: NextPage<ProjectInfoType> = (info) => {
 
 export default function Project() {
   return (
-    <div className="bg-slate-900 flex justify-center p-24 h-0 flex-auto overflow-auto">
+    <Flex
+      justifyContent={"center"}
+      p={24}
+      h={0}
+      flex={"auto"}
+      overflow={"auto"}
+      className="bg-slate-900"
+    >
       <Stack gap={4}>
         <Heading color={"white"}>Project</Heading>
         <Divider />
@@ -89,6 +96,6 @@ export default function Project() {
           ))}
         </SimpleGrid>
       </Stack>
-    </div>
+    </Flex>
   );
 }

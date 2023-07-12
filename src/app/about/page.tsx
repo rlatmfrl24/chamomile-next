@@ -26,12 +26,9 @@ import {
   UnorderedList,
   ListItem,
   Flex,
+  Container,
 } from "@chakra-ui/react";
-import ReactPageScroller from "react-page-scroller";
 import { NextPage } from "next";
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 import { MdWork } from "react-icons/md";
 import { steps } from "./data";
 
@@ -73,61 +70,58 @@ const SkillCard: NextPage<{
 
 const CareerPage = () => {
   return (
-    <Box display={"flex"} flex={1} alignItems={"center"}>
-      <Box display={"flex"} flexDirection={"column"}>
-        <Stepper
-          index={1}
-          orientation="vertical"
-          colorScheme="whiteAlpha"
-          gap={0}
-          mt={10}
-        >
-          {steps.map((step, index) => (
-            <Step key={index}>
-              <StepIndicator>
-                <StepStatus
-                  complete={<StepIcon />}
-                  incomplete={<StepNumber />}
-                  active={<Icon as={MdWork} color={"white"} />}
-                />
-              </StepIndicator>
-              <Box flexShrink={0} mb={6} ml={1}>
-                <StepTitle>
-                  <Text
-                    color={"white"}
-                    fontWeight={"bold"}
-                    fontSize={"3xl"}
-                    className="-translate-y-2"
-                  >
-                    {step.title}
+    <Stepper
+      index={1}
+      w={"fit-content"}
+      orientation="vertical"
+      colorScheme="whiteAlpha"
+      gap={0}
+      mt={10}
+    >
+      {steps.map((step, index) => (
+        <Step key={index}>
+          <StepIndicator>
+            <StepStatus
+              complete={<StepIcon />}
+              incomplete={<StepNumber />}
+              active={<Icon as={MdWork} color={"white"} />}
+            />
+          </StepIndicator>
+          <Box flexShrink={0} mb={6} ml={1}>
+            <StepTitle>
+              <Text
+                color={"white"}
+                fontWeight={"bold"}
+                fontSize={"3xl"}
+                className="-translate-y-2"
+              >
+                {step.title}
+              </Text>
+              <Text color={"white"} fontSize={"xl"}>
+                {step.role}
+              </Text>
+            </StepTitle>
+            <StepDescription as="div">
+              <Stack>
+                {step.startDate !== "" && (
+                  <Text color={"white"}>
+                    {step.startDate} ~ {step.endDate}
                   </Text>
-                  <Text color={"white"} fontSize={"xl"}>
-                    {step.role}
-                  </Text>
-                </StepTitle>
-                <StepDescription as="div">
-                  <Stack>
-                    {step.startDate !== "" && (
-                      <Text color={"white"}>
-                        {step.startDate} ~ {step.endDate}
-                      </Text>
-                    )}
-                    <UnorderedList my={3}>
-                      {step.description.map((desc, index) => (
-                        <ListItem key={index} color={"white"} fontSize={"md"}>
-                          {desc}
-                        </ListItem>
-                      ))}
-                    </UnorderedList>
-                  </Stack>
-                </StepDescription>
-              </Box>
-              <StepSeparator />
-            </Step>
-          ))}
-        </Stepper>
-      </Box>
-    </Box>
+                )}
+                <UnorderedList my={3}>
+                  {step.description.map((desc, index) => (
+                    <ListItem key={index} color={"white"} fontSize={"md"}>
+                      {desc}
+                    </ListItem>
+                  ))}
+                </UnorderedList>
+              </Stack>
+            </StepDescription>
+          </Box>
+          <StepSeparator />
+        </Step>
+      ))}
+    </Stepper>
   );
 };
 
@@ -196,61 +190,30 @@ const SkillPage = () => {
   );
 };
 
-const ScrollGuideComponent: NextPage<{
-  variant: "up" | "down";
-  target: string;
-}> = ({ variant, target }) => {
-  let motionDirection = variant === "up" ? -10 : 10;
-
-  return (
-    <motion.div
-      className="flex flex-col items-center gap-2"
-      animate={{
-        y: [0, motionDirection, 0],
-      }}
-      transition={{ duration: 1.5, repeat: Infinity }}
-    >
-      <Icon
-        as={HiOutlineChevronDoubleDown}
-        className={`text-white rotate-180 ${
-          variant === "up" ? "visible" : "invisible"
-        }`}
-      />
-      <Text as="div" color={"white"} display={"flex"}>
-        Scroll {variant === "up" ? "up" : "down"} to
-        <Text ml={1} fontWeight={"bold"}>
-          {target}
-        </Text>
-      </Text>
-      <Icon
-        as={HiOutlineChevronDoubleDown}
-        className={`text-white ${variant === "up" ? "invisible" : "visible"}`}
-      />
-    </motion.div>
-  );
-};
-
 export default function About() {
-  const [currentPage, setCurrentPage] = useState(0);
-  const handlePageChange = (number: number) => {
-    setCurrentPage(number);
-  };
-
   return (
-    <ReactPageScroller
-      pageOnChange={handlePageChange}
-      customPageNumber={currentPage}
-      animationTimer={700}
+    <Flex
+      justifyContent={"center"}
+      p={24}
+      h={0}
+      flex={"auto"}
+      overflow={"auto"}
+      className="bg-slate-900"
     >
-      <div className="bg-slate-900 flex flex-col justify-between items-center p-16 h-full min-h-fit overflow-auto">
-        <Flex flex={1} gap={10} className="items-center">
-          <Stack className="flex justify-end items-center">
+      <Container
+        maxW={"container.lg"}
+        display={"flex"}
+        flexDirection={"column"}
+        alignItems={"center"}
+        h={"fit-content"}
+      >
+        <Stack className="flex justify-center items-center" gap={16}>
+          <Flex flexDirection={"column"} alignItems={"center"} gap={3}>
             <Image
               objectFit={"contain"}
               src="/default-profile.svg"
               alt="profile"
               className="rounded-full"
-              boxSize={64}
               mx="auto"
             />
             <Heading color="white">Seul-Ki Kim</Heading>
@@ -261,19 +224,11 @@ export default function About() {
             <Text className="flex gap-2 items-center" color={"white"}>
               Seoul, Korea
             </Text>
-          </Stack>
-        </Flex>
-        <ScrollGuideComponent variant="down" target="Skill" />
-      </div>
-      <div className="bg-slate-900 flex flex-col justify-between items-center p-24 h-full min-h-fit overflow-auto">
-        <ScrollGuideComponent variant="up" target="Profile" />
-        <SkillPage />
-        <ScrollGuideComponent variant="down" target="Career" />
-      </div>
-      <div className="bg-slate-900 flex flex-col justify-between items-center p-24 h-full min-h-fit overflow-auto">
-        <ScrollGuideComponent variant="up" target="Skill" />
-        <CareerPage />
-      </div>
-    </ReactPageScroller>
+          </Flex>
+          <SkillPage />
+          <CareerPage />
+        </Stack>
+      </Container>
+    </Flex>
   );
 }
