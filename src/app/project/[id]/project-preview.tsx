@@ -16,6 +16,7 @@ const ProjectPreview: NextPage<{
       <swiper-container
         navigation
         pagination
+        autoplay
         style={
           {
             "--swiper-navigation-size": "24px",
