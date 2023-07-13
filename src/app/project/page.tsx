@@ -59,7 +59,7 @@ const ProjectCard: NextPage<ProjectInfoType> = (info) => {
           </Stack>
         </CardHeader>
         <CardBody>
-          <Text color={"white"} wordBreak={"keep-all"}>
+          <Text color={"white"} wordBreak={"keep-all"} fontFamily={"body"}>
             <Balancer>{info.summary_kr}</Balancer>
           </Text>
         </CardBody>

@@ -20,6 +20,9 @@ dependencies:
   '@emotion/styled':
     specifier: ^11.11.0
     version: 11.11.0(@emotion/react@11.11.1)(@types/react@18.2.14)(react@18.2.0)
+  '@fontsource-variable/montserrat':
+    specifier: ^5.0.6
+    version: 5.0.6
   '@types/node':
     specifier: 20.3.2
     version: 20.3.2
@@ -1405,6 +1408,10 @@ packages:
   /@eslint/js@8.43.0:
     resolution: {integrity: sha512-s2UHCoiXfxMvmfzqoN+vrQ84ahUSYde9qNO1MdxmoEhyHWsfmwOpFlwYV+ePJEVc7gFnATGUi376WowX1N7tFg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: false
+
+  /@fontsource-variable/montserrat@5.0.6:
+    resolution: {integrity: sha512-knjhYCaoKAqNce5LPezPY9j4Qbwa6mRwXvyS/Z3/yq2XoibX4V1E/39V6OnAonxUKwyCiu/D+QZfzlJp4Zu7CA==}
     dev: false
 
   /@humanwhocodes/config-array@0.11.10:

@@ -2,12 +2,21 @@
 "use client";
 
 import { CacheProvider } from "@chakra-ui/next-js";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import "@fontsource-variable/montserrat";
+import "@fontsource/nanum-gothic";
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  const theme = extendTheme({
+    fonts: {
+      heading: `'Montserrat Variable', sans-serif`,
+      body: `'Nanum Gothic', sans-serif`,
+    },
+  });
+
   return (
     <CacheProvider>
-      <ChakraProvider>{children}</ChakraProvider>
+      <ChakraProvider theme={theme}>{children}</ChakraProvider>
     </CacheProvider>
   );
 }

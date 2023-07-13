@@ -1,6 +1,14 @@
 "use client";
 
-import { Box, HStack, Link, Stack, Text, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  Heading,
+  Link,
+  Stack,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 
 export default function Home() {
@@ -10,17 +18,17 @@ export default function Home() {
         <div>TBU</div>
         <div className="flex flex-col gap-3">
           <Box>
-            <Text fontSize={"6xl"} fontWeight={"bold"} color={"white"}>
+            <Heading fontSize={"6xl"} fontWeight={"bold"} color={"white"}>
               React
-            </Text>
-            <Text fontSize={"6xl"} fontWeight={"bold"} color={"white"}>
+            </Heading>
+            <Heading fontSize={"6xl"} fontWeight={"bold"} color={"white"}>
               Frontend
-            </Text>
-            <Text fontSize={"6xl"} fontWeight={"bold"} color={"white"}>
+            </Heading>
+            <Heading fontSize={"6xl"} fontWeight={"bold"} color={"white"}>
               Developer
-            </Text>
+            </Heading>
           </Box>
-          <Text color={"gray.400"}>
+          <Text color={"gray.400"} fontFamily={"body"}>
             Please Check out
             <Link
               as={NextLink}

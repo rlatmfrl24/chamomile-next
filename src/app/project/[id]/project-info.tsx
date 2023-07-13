@@ -29,7 +29,7 @@ const ProjectInfo: NextPage<{
 }> = ({ data, thumbs }) => {
   return (
     <Flex className="gap-10 m-24 h-fit">
-      <Container w={"container.md"}>
+      <Container w={"container.md"} fontFamily={"body"}>
         <IconButton
           colorScheme="white"
           aria-label="Back to project list"

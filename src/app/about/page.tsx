@@ -46,7 +46,9 @@ const SkillCard: NextPage<{
     >
       <CardBody>
         <Stack spacing={5}>
-          <Heading color={"white"}>{title}</Heading>
+          <Heading color={"white"} fontWeight={"bold"}>
+            {title}
+          </Heading>
 
           <Progress
             value={progress}
@@ -58,7 +60,9 @@ const SkillCard: NextPage<{
           <Wrap>
             {tags.map((tag) => (
               <WrapItem key={tag}>
-                <Tag>{tag}</Tag>
+                <Tag fontFamily={"body"} fontWeight={"bold"}>
+                  {tag}
+                </Tag>
               </WrapItem>
             ))}
           </Wrap>
@@ -91,13 +95,19 @@ const CareerPage = () => {
             <StepTitle>
               <Text
                 color={"white"}
-                fontWeight={"bold"}
+                fontFamily={"heading"}
                 fontSize={"3xl"}
+                fontWeight={"bold"}
                 className="-translate-y-2"
               >
                 {step.title}
               </Text>
-              <Text color={"white"} fontSize={"xl"}>
+              <Text
+                color={"white"}
+                fontSize={"xl"}
+                fontFamily={"body"}
+                fontWeight={"bold"}
+              >
                 {step.role}
               </Text>
             </StepTitle>
@@ -110,7 +120,12 @@ const CareerPage = () => {
                 )}
                 <UnorderedList my={3}>
                   {step.description.map((desc, index) => (
-                    <ListItem key={index} color={"white"} fontSize={"md"}>
+                    <ListItem
+                      key={index}
+                      color={"white"}
+                      fontSize={"md"}
+                      fontFamily={"body"}
+                    >
                       {desc}
                     </ListItem>
                   ))}
