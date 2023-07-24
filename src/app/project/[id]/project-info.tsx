@@ -22,11 +22,23 @@ import { Balancer } from "react-wrap-balancer";
 import { ProjectBadgeProvider } from "../component";
 import { AiFillGithub } from "react-icons/ai";
 import { CgWebsite } from "react-icons/cg";
+import { useAppBarStore } from "@/app/store";
+import { useLayoutEffect } from "react";
 
 const ProjectInfo: NextPage<{
   data: ProjectInfoDetailType | undefined;
   thumbs: string[];
 }> = ({ data, thumbs }) => {
+  const setAppBarState = useAppBarStore((state) => state.setAppBarState);
+
+  useLayoutEffect(() => {
+    setAppBarState({
+      id: 3,
+      name: "Project",
+      path: "/project",
+    });
+  }, [setAppBarState]);
+
   return (
     <Flex className="gap-10 m-24 h-fit">
       <Container w={"container.md"} fontFamily={"body"}>

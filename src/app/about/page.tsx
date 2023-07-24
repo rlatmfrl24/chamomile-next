@@ -31,6 +31,8 @@ import {
 import { NextPage } from "next";
 import { MdWork } from "react-icons/md";
 import { skillData, steps } from "./data";
+import { useAppBarStore } from "../store";
+import { useLayoutEffect } from "react";
 
 const SkillCard: NextPage<{
   title: string;
@@ -157,6 +159,16 @@ const SkillPage = () => {
 };
 
 export default function About() {
+  const setAppBarState = useAppBarStore((state) => state.setAppBarState);
+
+  useLayoutEffect(() => {
+    setAppBarState({
+      id: 2,
+      name: "About",
+      path: "/about",
+    });
+  }, [setAppBarState]);
+
   return (
     <Flex
       justifyContent={"center"}
