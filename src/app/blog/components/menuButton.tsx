@@ -1,9 +1,8 @@
 "use client";
 
-import { Link } from "@chakra-ui/next-js";
 import { BlogCategoryProps, useBlogMenuStore } from "../store";
-import NextLink from "next/link";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 function CategoryButton({ categoryType }: { categoryType: BlogCategoryProps }) {
   const currentCategory = useBlogMenuStore((state) => state.currentCategory);
@@ -14,15 +13,14 @@ function CategoryButton({ categoryType }: { categoryType: BlogCategoryProps }) {
 
   useEffect(() => {
     if (currentCategory.path === categoryType.path) {
-      setButtonClassName("hover:text-black text-blue-400");
+      setButtonClassName("hover:text-blue-400 text-blue-400 font-bold");
     } else {
-      setButtonClassName("hover:text-black text-gray-400");
+      setButtonClassName("hover:text-blue-400 text-gray-400");
     }
   }, [currentCategory, categoryType]);
 
   return (
     <Link
-      as={NextLink}
       href={`/blog/${categoryType.path}`}
       onClick={() => {
         setCurrentCategory(categoryType);

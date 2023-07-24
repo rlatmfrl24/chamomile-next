@@ -1,8 +1,7 @@
 "use client";
 
-import { Button, ButtonGroup, Heading, Link } from "@chakra-ui/react";
-import NextLink from "next/link";
-import { BlogCategoryProps, useBlogMenuStore } from "../store";
+import { ButtonGroup, Heading } from "@chakra-ui/react";
+import { useBlogMenuStore } from "../store";
 import { useEffect } from "react";
 import CategoryButton from "./menuButton";
 

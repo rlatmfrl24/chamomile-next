@@ -21,5 +21,5 @@ export default function BlogContentPage({
     });
   }, [setCurrentCategory, params.category]);
 
-  return <div className="flex-1">BlogContentPage</div>;
+  return <div className="flex-1">{params.category}</div>;
 }

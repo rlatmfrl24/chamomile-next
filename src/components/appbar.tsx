@@ -2,9 +2,8 @@
 
 import { useAppBarStore } from "@/app/store";
 import { MenuItemType } from "@/lib/typeDef";
-import { Text } from "@chakra-ui/react";
-import Link from "next/link";
 import { useLayoutEffect, useState } from "react";
+import Link from "next/link";
 
 const menuList: MenuItemType[] = [
   {
