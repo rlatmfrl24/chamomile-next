@@ -139,7 +139,7 @@ const ProjectLinkProvider: NextPage<{
         <Link href={github} isExternal>
           <Button
             leftIcon={<AiFillGithub />}
-            variant={"outline"}
+            variant={"unstyled"}
             color={"white"}
             colorScheme="whiteAlpha"
           >

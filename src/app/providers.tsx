@@ -9,6 +9,8 @@ import "@fontsource/noto-sans-kr";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const theme = extendTheme({
+    initialColorMode: "dark",
+    useSystemColorMode: false,
     fonts: {
       heading: `'Montserrat Variable', sans-serif`,
       body: `'Nanum Gothic', sans-serif`,

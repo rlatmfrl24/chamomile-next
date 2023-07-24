@@ -1,9 +1,9 @@
 import { NextPage } from "next";
-import { AspectRatio, Box, Flex, Image } from "@chakra-ui/react";
+import { AspectRatio, Flex, Image } from "@chakra-ui/react";
 import { register } from "swiper/element/bundle";
 import { CSSProperties, useState } from "react";
-register();
 import FsLightbox from "fslightbox-react";
+register();
 
 const ProjectPreview: NextPage<{
   thumbs: string[];
@@ -12,13 +12,6 @@ const ProjectPreview: NextPage<{
     toggler: false,
     slide: 1,
   });
-
-  function toggleLightbox() {
-    setToggler({
-      toggler: !toggler.toggler,
-      slide: toggler.slide,
-    });
-  }
 
   return (
     <>
