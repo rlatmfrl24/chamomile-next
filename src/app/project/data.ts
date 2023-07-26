@@ -169,9 +169,9 @@ const ProjectList: ProjectInfoDetailType[] = [
   },
 
   {
-    pid: "rabit-keyboard",
+    pid: "rebit-keyboard",
     type: [ProjectType.General],
-    title: "RABIT A-KEYBOARD",
+    title: "REBIT A-KEYBOARD",
     organization: "Phill-IT",
     description_kr:
       "140개 언어 지원과 자동 추천 및 교정 기능을 지원하는 모바일 기기용 가상키보드 솔루션(갤럭시 S8 기본 키보드로 탑재)",
