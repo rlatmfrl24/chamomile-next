@@ -1,8 +1,9 @@
 "use client";
 
+import { useAppBarStore } from "@/app/store";
 import { MenuItemType } from "@/lib/typeDef";
+import { useLayoutEffect, useState } from "react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const menuList: MenuItemType[] = [
   {
@@ -20,11 +21,11 @@ const menuList: MenuItemType[] = [
     name: "Project",
     path: "/project",
   },
-  {
-    id: 4,
-    name: "Blog",
-    path: "/blog",
-  },
+  // {
+  //   id: 4,
+  //   name: "Blog",
+  //   path: "/blog",
+  // },
   {
     id: 5,
     name: "Contact",
@@ -33,32 +34,38 @@ const menuList: MenuItemType[] = [
 ];
 
 const Appbar = () => {
-  const [currentMenu, setCurrentMenu] = useState<number>(1);
+  const currentMenu = useAppBarStore((state) => state.appBarState);
+  const setCurrentMenu = useAppBarStore((state) => state.setAppBarState);
 
-  useEffect(() => {
-    const path = window.location.pathname;
-    const firstDepth = "/" + path.split("/")[1];
+  const NavButton = ({ item }: { item: MenuItemType }) => {
+    const [buttonClassName, setButtonClassName] = useState<string>("");
+    useLayoutEffect(() => {
+      if (currentMenu.id === item.id) {
+        setButtonClassName("text-blue-400");
+      } else {
+        setButtonClassName("text-gray-400");
+      }
+    }, [item]);
 
-    const menu = menuList.find((item) => item.path === firstDepth);
-    if (menu !== undefined) {
-      setCurrentMenu(menu.id);
-    }
-  }, []);
+    return (
+      <Link
+        href={item.path}
+        className={`${buttonClassName} hover:text-blue-400 font-bold`}
+        onClick={() => {
+          setCurrentMenu(item);
+        }}
+      >
+        {item.name}
+      </Link>
+    );
+  };
 
   return (
     <>
       <div className="flex justify-center items-center px-4 py-2 bg-gray-800 text-white gap-8 w-full z-50">
         {menuList.map((item) => (
           <div key={item.id}>
-            <Link
-              href={item.path}
-              className={` ${currentMenu === item.id ? "text-blue-400 " : ""}`}
-              onClick={() => {
-                setCurrentMenu(item.id);
-              }}
-            >
-              {item.name}
-            </Link>
+            <NavButton item={item} />
           </div>
         ))}
       </div>

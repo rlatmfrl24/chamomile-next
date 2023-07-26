@@ -1,3 +1,83 @@
+const skillData = [
+  {
+    skillName: "Frontend",
+    progress: 90,
+    color: "blue",
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Recoil",
+      "MobX",
+      "Zustand",
+      "React-query",
+      "Tailwind CSS",
+      "Chakra UI",
+      "Material UI",
+      "VISX",
+    ],
+  },
+  {
+    skillName: "Android",
+    progress: 60,
+    color: "green",
+    tags: [
+      "Java",
+      "Kotlin",
+      "Android SDK",
+      "Android Jetpack",
+      "Koin",
+      "Dexter",
+      "Data Binding",
+      "Retrofit",
+      "LiveData",
+      "Room",
+      "Realm",
+    ],
+  },
+  {
+    skillName: "Backend",
+    progress: 50,
+    color: "red",
+    tags: [
+      "Node.js",
+      "Express",
+      "TypeScript",
+      "Golang",
+      "Gin",
+      "MongoDB",
+      "GraphQL",
+      "Apollo",
+      "Prisma",
+      "Docker",
+      "GCP",
+    ],
+  },
+  {
+    skillName: "Others",
+    progress: 40,
+    color: "yellow",
+    tags: [
+      "Git",
+      "GitHub",
+      "GitLab",
+      "Jira",
+      "Confluence",
+      "Slack",
+      "Notion",
+      "Figma",
+      "Docker",
+      "GCP",
+      "Firebase",
+      "Selenium",
+      "Tensorite",
+    ],
+  },
+];
+
 const steps = [
   {
     title: "Phill-IT",
@@ -34,4 +114,4 @@ const steps = [
   },
 ];
 
-export { steps };
+export { steps, skillData };

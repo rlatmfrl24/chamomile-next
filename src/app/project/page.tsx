@@ -1,9 +1,7 @@
 "use client";
 
-import { ProjectInfoType, ProjectType } from "@/lib/typeDef";
+import { ProjectInfoType } from "@/lib/typeDef";
 import {
-  Badge,
-  Box,
   Card,
   CardBody,
   CardHeader,
@@ -21,6 +19,8 @@ import NextLink from "next/link";
 import { ProjectList } from "./data";
 import { Balancer } from "react-wrap-balancer";
 import { ProjectBadgeProvider } from "./component";
+import { useAppBarStore } from "../store";
+import { useLayoutEffect } from "react";
 
 const ProjectCard: NextPage<ProjectInfoType> = (info) => {
   return (
@@ -59,7 +59,7 @@ const ProjectCard: NextPage<ProjectInfoType> = (info) => {
           </Stack>
         </CardHeader>
         <CardBody>
-          <Text color={"white"} wordBreak={"keep-all"}>
+          <Text color={"white"} wordBreak={"keep-all"} fontFamily={"body"}>
             <Balancer>{info.summary_kr}</Balancer>
           </Text>
         </CardBody>
@@ -69,6 +69,16 @@ const ProjectCard: NextPage<ProjectInfoType> = (info) => {
 };
 
 export default function Project() {
+  const setAppBarState = useAppBarStore((state) => state.setAppBarState);
+
+  useLayoutEffect(() => {
+    setAppBarState({
+      id: 3,
+      name: "Project",
+      path: "/project",
+    });
+  }, [setAppBarState]);
+
   return (
     <Flex
       justifyContent={"center"}

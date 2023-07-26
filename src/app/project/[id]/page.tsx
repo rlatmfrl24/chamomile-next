@@ -3,6 +3,8 @@ import { ProjectInfoDetailType } from "@/lib/typeDef";
 import ProjectInfo from "./project-info";
 import fs from "fs";
 import path from "path";
+import { useAppBarStore } from "@/app/store";
+import { useLayoutEffect } from "react";
 
 export default function ProjectDetail({
   params,

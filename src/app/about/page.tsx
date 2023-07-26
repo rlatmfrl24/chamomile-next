@@ -30,7 +30,9 @@ import {
 } from "@chakra-ui/react";
 import { NextPage } from "next";
 import { MdWork } from "react-icons/md";
-import { steps } from "./data";
+import { skillData, steps } from "./data";
+import { useAppBarStore } from "../store";
+import { useLayoutEffect } from "react";
 
 const SkillCard: NextPage<{
   title: string;
@@ -40,13 +42,15 @@ const SkillCard: NextPage<{
 }> = ({ title, progress, tags, color }) => {
   return (
     <Card
-      className="bg-slate-900 w-auto min-w-min max-w-md hover:bg-slate-800 cursor-pointer"
+      className="bg-slate-900 w-auto min-w-min max-w-md"
       borderColor={"gray.300"}
       variant={"outline"}
     >
       <CardBody>
         <Stack spacing={5}>
-          <Heading color={"white"}>{title}</Heading>
+          <Heading color={"white"} fontWeight={"bold"}>
+            {title}
+          </Heading>
 
           <Progress
             value={progress}
@@ -58,7 +62,9 @@ const SkillCard: NextPage<{
           <Wrap>
             {tags.map((tag) => (
               <WrapItem key={tag}>
-                <Tag>{tag}</Tag>
+                <Tag fontFamily={"body"} fontWeight={"bold"}>
+                  {tag}
+                </Tag>
               </WrapItem>
             ))}
           </Wrap>
@@ -91,13 +97,19 @@ const CareerPage = () => {
             <StepTitle>
               <Text
                 color={"white"}
-                fontWeight={"bold"}
+                fontFamily={"heading"}
                 fontSize={"3xl"}
+                fontWeight={"bold"}
                 className="-translate-y-2"
               >
                 {step.title}
               </Text>
-              <Text color={"white"} fontSize={"xl"}>
+              <Text
+                color={"white"}
+                fontSize={"xl"}
+                fontFamily={"body"}
+                fontWeight={"bold"}
+              >
                 {step.role}
               </Text>
             </StepTitle>
@@ -110,7 +122,12 @@ const CareerPage = () => {
                 )}
                 <UnorderedList my={3}>
                   {step.description.map((desc, index) => (
-                    <ListItem key={index} color={"white"} fontSize={"md"}>
+                    <ListItem
+                      key={index}
+                      color={"white"}
+                      fontSize={"md"}
+                      fontFamily={"body"}
+                    >
                       {desc}
                     </ListItem>
                   ))}
@@ -128,69 +145,30 @@ const CareerPage = () => {
 const SkillPage = () => {
   return (
     <SimpleGrid columns={2} spacing={6}>
-      <SkillCard
-        title={"Frontend"}
-        progress={90}
-        tags={[
-          "React",
-          "Next.js",
-          "Tailwind CSS",
-          "Chakra UI",
-          "MUI",
-          "Semantic UI",
-          "Recoil",
-          "MobX",
-          "Zustand",
-          "React-query",
-          "VISX(D3)",
-        ]}
-      />
-      <SkillCard
-        title={"Android"}
-        color="green"
-        progress={60}
-        tags={[
-          "Kotlin",
-          "Java",
-          "Android Studio",
-          "Jetpack Compose",
-          "Koin",
-          "Dexter",
-          "Data Binding",
-          "Retrofit",
-          "LiveData",
-          "Room",
-          "Realm",
-        ]}
-      />
-      <SkillCard
-        title={"Backend"}
-        color="red"
-        progress={50}
-        tags={["Node.js", "Express", "TypeScript", "Golang", "Goin", "MongoDB"]}
-      />
-
-      <SkillCard
-        title={"Others"}
-        progress={40}
-        color="yellow"
-        tags={[
-          "Docker",
-          "GCP",
-          "Git",
-          "Firebase",
-          "Python",
-          "Selenium",
-          "Jira",
-          "Confluence",
-          "Tensorite",
-        ]}
-      />
+      {skillData.map((skill, index) => (
+        <SkillCard
+          key={index}
+          title={skill.skillName}
+          progress={skill.progress}
+          color={skill.color}
+          tags={skill.tags}
+        />
+      ))}
     </SimpleGrid>
   );
 };
 
 export default function About() {
+  const setAppBarState = useAppBarStore((state) => state.setAppBarState);
+
+  useLayoutEffect(() => {
+    setAppBarState({
+      id: 2,
+      name: "About",
+      path: "/about",
+    });
+  }, [setAppBarState]);
+
   return (
     <Flex
       justifyContent={"center"}
