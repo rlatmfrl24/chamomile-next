@@ -21,11 +21,11 @@ const menuList: MenuItemType[] = [
     name: "Project",
     path: "/project",
   },
-  // {
-  //   id: 4,
-  //   name: "Blog",
-  //   path: "/blog",
-  // },
+  {
+    id: 4,
+    name: "Blog",
+    path: "/blog",
+  },
   {
     id: 5,
     name: "Contact",
