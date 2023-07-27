@@ -1,7 +1,7 @@
 ---
 title: Material UI를 활용한 Transition 적용하기
 date: 2021-03-08 14:14:84
-category: Android
+category: "Development"
 draft: false
 ---
 
@@ -11,7 +11,7 @@ Android 개발자는 UI를 구현하기 위한 많은 Custom View와 라이브�
 
 이번 포스트에서는 Material UI Framework를 적용하고, 여기서 제공하는 Transition API를 적용하는 법을 다뤄볼 것이다.
 
-*왜 Transtion API냐고? 다른 API는 그냥 적용하면 쓸수 있었는데 이 망할 API만 제대로 동작하질 않아서 고치는데 며칠이 걸렸기 때문이다...*
+_왜 Transtion API냐고? 다른 API는 그냥 적용하면 쓸수 있었는데 이 망할 API만 제대로 동작하질 않아서 고치는데 며칠이 걸렸기 때문이다..._
 
 ## 적용
 
@@ -50,7 +50,7 @@ override fun onCreate(savedInstanceState: Bundle?) {
     ...
 ```
 
-화면전환을 통해 퇴장할 Activity A에다 `onCreate` 메소드가 호출되기 이전에 3가지 코드 스니펫(`requestFeature, setExitSharedElementCallback, sharedElementsUseOverlay`)을 호출하여준다. 
+화면전환을 통해 퇴장할 Activity A에다 `onCreate` 메소드가 호출되기 이전에 3가지 코드 스니펫(`requestFeature, setExitSharedElementCallback, sharedElementsUseOverlay`)을 호출하여준다.
 
 오타에 주의하자. **Exit**를 반드시 확인해야한다.
 

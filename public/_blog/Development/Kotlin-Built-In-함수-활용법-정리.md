@@ -1,8 +1,9 @@
 ---
 title: Kotlin Built-In 함수 활용법 정리(filter, map, let, apply, also)
-date: '2019-10-17 00:00:11'
+date: "2019-10-17 00:00:11"
 draft: false
-category: 'Development'
+category: "Development"
+tag: "#Kotlin"
 ---
 
 드디어 길고길었던 신규 개념 시리즈의 마지막이다.

@@ -1,7 +1,7 @@
 ---
 title: Android RecyclerView XML 미리보기
 date: 2020-10-20 13:10:57
-category: Android
+category: "Development"
 draft: false
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: Android ConstraintSet을 통한 애니메이션 적용
-date: '2019-11-27 00:00:11'
+date: "2019-11-27 00:00:11"
 draft: false
-category: 'Android'
+category: "Development"
 ---
 
 ## 소개

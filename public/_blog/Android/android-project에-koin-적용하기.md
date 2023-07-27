@@ -1,7 +1,7 @@
 ---
 title: Android Project에 Koin 적용하기
 date: 2020-10-21 15:10:89
-category: Android
+category: "Development"
 draft: false
 ---
 

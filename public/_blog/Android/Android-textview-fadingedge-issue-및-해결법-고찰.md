@@ -1,7 +1,7 @@
 ---
 title: Android Textview FadingEdge Issue 및 해결법 고찰
 date: 2020-02-25 15:02:00
-category: Android
+category: "Development"
 draft: false
 ---
 

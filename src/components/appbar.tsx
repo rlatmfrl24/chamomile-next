@@ -41,7 +41,7 @@ const Appbar = () => {
     const [buttonClassName, setButtonClassName] = useState<string>("");
     useLayoutEffect(() => {
       if (currentMenu.id === item.id) {
-        setButtonClassName("text-blue-400");
+        setButtonClassName("text-blue-400 bg-blue-900");
       } else {
         setButtonClassName("text-gray-400");
       }
@@ -50,7 +50,7 @@ const Appbar = () => {
     return (
       <Link
         href={item.path}
-        className={`${buttonClassName} hover:text-blue-400 font-bold`}
+        className={`${buttonClassName} hover:text-blue-400 font-bold px-2 py-1 rounded-md`}
         onClick={() => {
           setCurrentMenu(item);
         }}

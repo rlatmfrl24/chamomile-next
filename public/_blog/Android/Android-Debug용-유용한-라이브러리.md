@@ -1,8 +1,8 @@
 ---
 title: Android Debug용 유용한 라이브러리
-date: '2019-10-17 00:00:11'
+date: "2019-10-17 00:00:11"
 draft: false
-category: 'Android'
+category: "Development"
 ---
 
 이번에는 주변분들에게 추천받은 Debugging용 라이브러리를 정리해보았다. 나중에 유용한 라이브러리를 더 배우게 되면 추가해볼 생각이다.

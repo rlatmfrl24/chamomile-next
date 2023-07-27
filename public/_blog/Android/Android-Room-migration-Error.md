@@ -1,8 +1,8 @@
 ---
 title: Android Room migration Error
-date: '2019-09-26 00:00:11'
+date: "2019-09-26 00:00:11"
 draft: false
-category: 'Android'
+category: "Development"
 ---
 
 Android Room Database 사용시 각기 별개의 스마트폰을 활용해 테스트를 할 경우, 드물지만 데이터베이스 버전이 맞지 않아서 DB 영역 접근시 에러가 나는 경우가 있다.

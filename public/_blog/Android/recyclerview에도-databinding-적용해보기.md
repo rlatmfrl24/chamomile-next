@@ -1,7 +1,7 @@
 ---
 title: RecyclerView에도 Databinding 적용해보기
 date: 2020-10-21 14:10:05
-category: Android
+category: "Development"
 draft: false
 ---
 

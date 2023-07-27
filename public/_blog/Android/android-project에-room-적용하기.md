@@ -1,7 +1,7 @@
 ---
 title: Android Project에 Room 적용하기
 date: 2020-10-21 16:10:06
-category: Android
+category: "Development"
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Android Custom View 제작해보기
 date: 2020-10-21 09:10:14
-category: Android
+category: "Development"
 draft: false
 ---
 

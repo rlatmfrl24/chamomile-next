@@ -1,7 +1,7 @@
 ---
 title: Android Date Picker Dialog 생성하고 적용하기
 date: 2020-10-21 10:10:35
-category: Android
+category: "Development"
 draft: false
 ---
 

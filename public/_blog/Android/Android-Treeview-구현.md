@@ -1,8 +1,8 @@
 ---
 title: Android Treeview 구현
-date: '2019-10-17 00:00:11'
+date: "2019-10-17 00:00:11"
 draft: false
-category: 'Android'
+category: "Development"
 ---
 
 ## Android Treeview 구현

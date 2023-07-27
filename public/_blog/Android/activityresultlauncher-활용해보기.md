@@ -1,7 +1,7 @@
 ---
 title: ActivityResultLauncher 활용해보기
 date: 2020-10-20 14:10:84
-category: Android
+category: "Development"
 draft: false
 ---
 

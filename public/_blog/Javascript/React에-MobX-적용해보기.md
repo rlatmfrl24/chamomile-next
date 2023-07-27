@@ -1,8 +1,9 @@
 ---
 title: React에 MobX 적용해보기
-date: '2019-11-26 00:00:11'
+date: "2019-11-26 00:00:11"
 draft: false
-category: 'Javascript'
+category: "Development"
+tag: "#React #MobX"
 ---
 
 ### 들어가기 전에
@@ -36,15 +37,15 @@ yarn add mobx mobx-react
 `Common.js`
 
 ```js
-import { useContext } from 'react'
+import { useContext } from "react";
 
-import { MobXProviderContext } from 'mobx-react'
+import { MobXProviderContext } from "mobx-react";
 
 function useStores() {
-  return useContext(MobXProviderContext)
+  return useContext(MobXProviderContext);
 }
 
-export default useStores
+export default useStores;
 ```
 
 다음으로는 프로젝트에서 활용할 Store를 만들어준다.
@@ -52,23 +53,23 @@ export default useStores
 `DataStore.js`
 
 ```js
-import { decorate, observable, action } from 'mobx'
+import { decorate, observable, action } from "mobx";
 
 class DataStore {
-  data = ''
+  data = "";
 
-  setData = value => {
-    this.data = value
-  }
+  setData = (value) => {
+    this.data = value;
+  };
 }
 
 decorate(DataStore, {
   keyword: observable,
 
   setData: action,
-})
+});
 
-export default DataStore
+export default DataStore;
 ```
 
 그 다음에는 해당 Store를 활용할 프로젝트의 App Component를 Provider로 묶어준다.
@@ -76,19 +77,19 @@ export default DataStore
 `index.js`
 
 ```js
-import { Provider } from 'mobx-react'
+import { Provider } from "mobx-react";
 
-import AuthStore from './store/DataStore'
+import AuthStore from "./store/DataStore";
 
-const data = new DataStore()
+const data = new DataStore();
 
 ReactDOM.render(
   <Provider data={data}>
     <App />
   </Provider>,
 
-  document.getElementById('root')
-)
+  document.getElementById("root")
+);
 ```
 
 이러면 프로젝트에서 Store를 활용할 준비는 다 된 것이다. 실제로 컴포넌트에서 Store를 활용하는 예제를 만들어보자.
@@ -125,10 +126,10 @@ function feature(){
 
 ```js
 const Feature = observer(() => {
-  const { data } = useStores()
+  const { data } = useStores();
 
-  return <div>{data.data}</div>
-})
+  return <div>{data.data}</div>;
+});
 ```
 
 ## 마무리

@@ -1,7 +1,7 @@
 ---
 title: Android GPS Location 획득하기
 date: 2020-10-20 16:10:67
-category: Android
+category: "Development"
 draft: false
 ---
 

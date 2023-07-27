@@ -1,7 +1,7 @@
 ---
 title: Navigation API를 활용한 Fragment간 이동 구현
 date: 2021-03-08 11:19:84
-category: Android
+category: "Development"
 draft: false
 ---
 
@@ -131,7 +131,8 @@ Navigation XML을 만들면 위와 같은 화면을 접할 수 있습니다. And
     </fragment>
 </navigation>
 ```
-위 XML은 해당 실제 프로젝트에서 사용한 Navigation Graph이다. 
+
+위 XML은 해당 실제 프로젝트에서 사용한 Navigation Graph이다.
 
 해당 Graph에는 Navigation에 사용되는 Fragment들이 `<fragment>`로 정의되어있다.각각의 `<fragment>` 태그에는 해당 Fragment의 ID, 표시명, 구현 클래스, Layout XML이 명시되어있다.
 
@@ -146,6 +147,7 @@ Navigation XML을 만들면 위와 같은 화면을 접할 수 있습니다. And
 [구글 공식 문서](https://developer.android.com/guide/navigation/navigation-getting-started?hl=ko)에서는 대상 간 이동을 위해 유형 안전성을 보장하고 인수값 전달을 제공하는 플러그인을 사용하는 것을 권장한다
 
 이를 위하여 앱 단계의 `build.gradle`에 다음과 같은 플러그인을 추가한다.
+
 ```gradle
 plugin{
     id 'androidx.navigation.safeargs.kotlin'
@@ -169,12 +171,11 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 여기까지 Navigation API를 활용한 Fragment 구성을 정리해보았다. 앞으로 Fragment를 활용하여 화면을 구성하고자할때는, Navigation Graph를 활용하여 Visible하게 화면 구성을 설정하고 NavController를 활용한 간편한 화면 관리를 사용할 수 있을 것이다.
 
-
 ## 덧붙여
 
 사실 여기서는 단순하게 Fragment 구조 성립과 이동을 정리해두었지만, 개인적으로는 앞으로 프로젝트 설계에 대한 많은 생각이 드는 API 였다.
 
 해당 API는 이전부터 언급되었던 Single Activity 형식의 구조 설계에 최적화되어있으며, 앞으로 구글이 지향하는 Android 의 구조 설계에 대한 의지가 어느정도 드러나보인다는 점이다.
-몇번의 Android Project를 통해 Activity간의 ViewModel 공유는 사실상 어려웠으며, `sharedViewModel`을 활용한 Fragment 간의 ViewModel 공유와 Navigation API 및 디자인 화면 제공을 통한 Fragment 관리의 유연한 설계가 가능하다는 점을 알게 되었다. 
+몇번의 Android Project를 통해 Activity간의 ViewModel 공유는 사실상 어려웠으며, `sharedViewModel`을 활용한 Fragment 간의 ViewModel 공유와 Navigation API 및 디자인 화면 제공을 통한 Fragment 관리의 유연한 설계가 가능하다는 점을 알게 되었다.
 
 앞으로의 프로젝트 설계에 Singel Activity 구조를 적극 검토하여 보다 나은 구조 설계에 대한 이해를 가져가도록 노력해보고자 한다.

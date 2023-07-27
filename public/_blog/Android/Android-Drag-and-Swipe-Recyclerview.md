@@ -1,8 +1,8 @@
 ---
 title: Android Drag and Swipe Recyclerview
-date: '2019-09-27 00:00:11'
+date: "2019-09-27 00:00:11"
 draft: false
-category: 'Android'
+category: "Development"
 ---
 
 ## Drag and Swipe RecyclerView

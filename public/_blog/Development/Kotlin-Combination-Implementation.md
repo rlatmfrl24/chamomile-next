@@ -1,8 +1,9 @@
 ---
 title: Kotlin-Combination-Implementation
-date: '2019-10-22 00:00:11'
+date: "2019-10-22 00:00:11"
 draft: false
-category: 'Development'
+category: "Development"
+tag: "#Kotlin"
 ---
 
 코틀린을 활용한 알고리즘 문제를 풀다가 경우의 수와 관련된 문제들이 자주 나와서 이를 쉽게 풀어나가기 위한 클래스를 만들어 보았다. 필요할 때가 활용하면 유용할 것 같다.

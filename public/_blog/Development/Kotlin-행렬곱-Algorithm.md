@@ -1,8 +1,9 @@
 ---
 title: Kotlin 행렬곱 Algorithm
-date: '2019-10-22 00:00:11'
+date: "2019-10-22 00:00:11"
 draft: false
-category: 'Development'
+category: "Development"
+tag: "#Kotlin"
 ---
 
 Kotlin 관련 알고리즘 문제 진행중 행렬곱 관련 Boilerplate를 발견해서 메모해둔다.

@@ -1,7 +1,7 @@
 ---
 title: Android App Loading 대기화면 설정
 date: 2020-02-25 08:02:86
-category: Android
+category: "Development"
 draft: false
 ---
 

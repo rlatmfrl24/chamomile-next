@@ -1,8 +1,9 @@
 ---
 title: React Hook 간단 설명
-date: '2019-11-26 00:00:11'
+date: "2019-11-26 00:00:11"
 draft: false
-category: 'Javascript'
+category: "Development"
+tag: "#React #Hook"
 ---
 
 #### React 16.8 버전부터 정식으로 릴리즈되어 화제가 된 Hook에 대한 간략한 설명과 사용법을 메모해둔다.
@@ -19,9 +20,9 @@ Hook은 이러한 점을 개선할 수 있는 기능인데, 대표적으로 함�
 
 ```js
 function feature() {
-  const [state, setState] = useState()
+  const [state, setState] = useState();
 
-  return <></>
+  return <></>;
 }
 ```
 
@@ -34,8 +35,8 @@ function feature() {
 ```js
 function feature() {
   useEffect(() => {
-    doSomething()
-  }, [])
+    doSomething();
+  }, []);
 }
 ```
 
@@ -45,4 +46,4 @@ function feature() {
 
 Hook의 활용법과 기능은 더욱 무궁무진하지만, 가장 기본적인 기능만 정리해두었다. 이후에 Hook에 대한 지식과 기능이 확장되면 그때 좀더 업데이트를 해볼 생각이다. 마지막으로 참고가 될만한 블로그를 링크해둔다.
 
-[리액트의 Hooks 완벽 적봉하기](https://velog.io/@velopert/react-hooks)
+[리액트의 Hooks 완벽 정복하기](https://velog.io/@velopert/react-hooks)

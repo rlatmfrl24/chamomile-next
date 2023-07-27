@@ -1,7 +1,7 @@
 ---
 title: Android에서 권한 취득하기
 date: 2020-03-08 13:54:84
-category: Android
+category: "Development"
 draft: false
 ---
 
@@ -14,6 +14,7 @@ Android Project를 개발하다보면 기기의 권한을 취득해야하는 경
 가장 기본적인 방법은 구글에서 제공하는 [Permission API](https://developer.android.com/training/permissions/evaluating?hl=ko)를 사용하는 것이다.
 
 먼저 `Manifest`에 앱이 요청할 수 있는 권한을 설정해주는 것이다.
+
 ```xml
 <manifest ...>
     <uses-permission android:name="android.permission.CAMERA"/>
@@ -22,7 +23,9 @@ Android Project를 개발하다보면 기기의 권한을 취득해야하는 경
     </application>
 </manifest>
 ```
+
 그리고 코드 레벨에서 유저에게 권한을 요청하는 코드 스니펫은 다음과 같다.
+
 ```kotlin
 when {
     ContextCompat.checkSelfPermission(
@@ -53,7 +56,8 @@ when {
 
 놀랍게도 Android의 Multi-Permission 관리를 용이하게 해주는 라이브러리가 있다. 바로 [Dexter](https://github.com/Karumi/Dexter)라는 라이브러리이다. 말로 설명할 필요없이 적용법을 보도록 하자
 
->`build.gralde`
+> `build.gralde`
+
 ```gradle
 dependencies{
     implementation 'com.karumi:dexter:6.2.2'
@@ -74,6 +78,6 @@ Dexter.withContext(this)
 
 ## 마무리
 
-사실 권한 취득을 위한 코드 스니펫을 엄청 많이 준비했었는데, 동료 개발자분의 라이브러리 추천과 동시에 휴지조각이 됐다(...) 권한 취득에 있어서는 당분간 Dexter를 사용할 예정이며, 만약 이슈가 있을 경우 그를 해결하기 위한 방안을 모색할 예정이다. 
+사실 권한 취득을 위한 코드 스니펫을 엄청 많이 준비했었는데, 동료 개발자분의 라이브러리 추천과 동시에 휴지조각이 됐다(...) 권한 취득에 있어서는 당분간 Dexter를 사용할 예정이며, 만약 이슈가 있을 경우 그를 해결하기 위한 방안을 모색할 예정이다.
 
 **결론은 주변에다 많이 물어보고 다니자..**

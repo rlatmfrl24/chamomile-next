@@ -1,7 +1,7 @@
 ---
 title: Android Dialog 생성해보기
 date: 2020-10-21 10:10:14
-category: Android
+category: "Development"
 draft: false
 ---
 

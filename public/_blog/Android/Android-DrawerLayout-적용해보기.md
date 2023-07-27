@@ -1,8 +1,8 @@
 ---
 title: Android DrawerLayout 적용해보기
-date: '2019-10-17 00:00:11'
+date: "2019-10-17 00:00:11"
 draft: false
-category: 'Android'
+category: "Development"
 ---
 
 요즘에는 쓰이는 앱이 많이 줄었지만, 여전히 강력한 Navigation 기능인 Drawer 구현을 위한 DrawerLayout 구현에 대해 정리했다.

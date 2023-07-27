@@ -1,7 +1,7 @@
 ---
 title: Android Soft Keyboard 적용 여부 Detect
 date: 2020-02-25 14:02:45
-category: Android
+category: "Development"
 draft: false
 ---
 

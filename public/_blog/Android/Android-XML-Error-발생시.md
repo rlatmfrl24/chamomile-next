@@ -1,8 +1,8 @@
 ---
 title: Android XML Error 발생시
-date: '2019-09-24 00:00:11'
+date: "2019-09-24 00:00:11"
 draft: false
-category: 'Android'
+category: "Development"
 ---
 
 가끔식 Android Studio에서 작업하다보면 XML 참조 구성이 망가지거나 Dependency가 제대로 적용이 안될때가 있다.

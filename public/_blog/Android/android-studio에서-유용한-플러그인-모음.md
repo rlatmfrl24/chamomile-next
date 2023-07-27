@@ -1,7 +1,7 @@
 ---
 title: Android Studio에서 유용한 플러그인 모음
 date: 2020-10-20 14:10:92
-category: Android
+category: "Development"
 draft: false
 ---
 

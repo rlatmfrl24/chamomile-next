@@ -1,7 +1,7 @@
 ---
 title: Room Database에 1:N 관계 정의하기
 date: 2021-03-08 14:10:84
-category: Android
+category: "Development"
 draft: false
 ---
 
@@ -36,6 +36,7 @@ data class Recipe(
 해당 모델은 칵테일 레시피이며, 1:N 관계에서 '1'의 역할을 할 Entity이다.
 
 그리고 이 레시피와 연결될 'N'개의 재료 Entity는 다음과 같다.
+
 ```kotlin
 package com.soulkey.craftsmanbartender.lib.model
 
@@ -92,6 +93,7 @@ data class RecipeWithIngredient(
 ### 조회
 
 Entity를 조회하는 DAO는 다음과 같이 정의한다
+
 ```kotlin
 @Transaction
 @Query("SELECT * FROM Recipe")

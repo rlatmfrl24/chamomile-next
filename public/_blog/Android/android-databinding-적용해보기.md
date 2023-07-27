@@ -1,7 +1,7 @@
 ---
 title: Android Databinding 적용해보기
 date: 2020-10-21 13:10:80
-category: Android
+category: "Development"
 draft: false
 ---
 

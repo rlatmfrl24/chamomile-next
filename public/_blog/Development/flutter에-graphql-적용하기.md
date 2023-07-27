@@ -3,6 +3,7 @@ title: Flutter에 GraphQL 적용하기
 date: 2020-03-24 07:03:74
 category: Development
 draft: false
+tag: "#Flutter #GraphQL"
 ---
 
 앞서 [Heroku, Docker, Prisma2를 활용한 GraphQL Server 제작해보기](https://sulfurbottom.netlify.com/Development/heroku-docker-prisma2%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-graphql-server-%EC%A0%9C%EC%9E%91%ED%95%B4%EB%B3%B4%EA%B8%B0/)를 통해서 GraphQL 임시 서버를 만든 후, 그것을 Heroku에 올려보았다. 이제는 Flutter에서 해당 GraphQL Service를 호출해보는 방법을 정리해보았다.
