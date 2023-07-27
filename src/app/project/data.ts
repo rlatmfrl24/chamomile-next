@@ -44,10 +44,10 @@ const ProjectList: ProjectInfoDetailType[] = [
     role: [`대표 UI Frontend 개발 담당`, `React.js UI Library 개발 담당`],
     skill: [
       `Bootstrap을 적용한 UI 개발`,
-      `Next.js를 활용한 Frontend 및 UI Library 개발`,
+      `Next.js를 활용한 Frontend 및 UI Component 개발`,
       `Tailwind CSS를 활용한 UI 개발`,
       `Zustand를 활용한 React.js 상태 관리`,
-      `Firebase를 활용한 Library 배포`,
+      `Firebase를 활용한 Component Documenation 구축`,
     ],
   },
   {
