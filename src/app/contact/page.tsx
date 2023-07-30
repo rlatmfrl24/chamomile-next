@@ -105,6 +105,11 @@ const ContactItem = ({
         colorScheme="white"
         size={"sm"}
         onClick={() => {
+          ["mailto:", "tel:"].forEach((prefix) => {
+            if (link.startsWith(prefix)) {
+              link = link.replace(prefix, "");
+            }
+          });
           navigator.clipboard.writeText(link);
           setIsCopied.toggle();
         }}

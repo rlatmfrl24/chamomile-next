@@ -3,6 +3,7 @@ title: Android RecyclerView XML 미리보기
 date: 2020-10-20 13:10:57
 category: "Development"
 draft: false
+tag: "#Android #RecyclerView"
 ---
 
 ## 소개

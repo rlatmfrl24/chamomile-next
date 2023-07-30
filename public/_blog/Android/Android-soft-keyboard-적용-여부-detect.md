@@ -3,6 +3,7 @@ title: Android Soft Keyboard 적용 여부 Detect
 date: 2020-02-25 14:02:45
 category: "Development"
 draft: false
+tag: "#Android #SoftKeyboard"
 ---
 
 ## 들어가기 전에

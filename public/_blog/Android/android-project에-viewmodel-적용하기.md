@@ -3,6 +3,7 @@ title: Android Project에 ViewModel 적용하기
 date: 2020-10-22 09:10:73
 category: "Development"
 draft: false
+tag: "#Android #ViewModel"
 ---
 
 ## 개요

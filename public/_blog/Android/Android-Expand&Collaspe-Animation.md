@@ -3,6 +3,7 @@ title: Android Expand & Collapse Animation
 date: "2019-09-24 00:00:11"
 draft: false
 category: "Development"
+tag: "#Android #Animation"
 ---
 
 Android Animation 코드 중 Expand & Collapse 잘 구현해놓은 예제가 있다.

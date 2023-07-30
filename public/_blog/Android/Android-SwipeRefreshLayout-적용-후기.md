@@ -3,6 +3,7 @@ title: Android SwipeRefreshLayout 적용 후기
 date: "2019-10-17 00:00:11"
 draft: false
 category: "Development"
+tag: "#Android #SwipeRefreshLayout"
 ---
 
 Material Design에서 많이 쓰이는 _Swipe to Refresh_ 개념을 Android 상에서 지원해주는 **SwipeRefreshLayout**이 있다. 해당 라이브러리를 적용해본 후기를 남겨본다.

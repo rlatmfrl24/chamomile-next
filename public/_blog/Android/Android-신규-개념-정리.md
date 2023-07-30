@@ -3,6 +3,7 @@ title: Android 신규 개념 정리
 date: "2099-11-27 00:00:11"
 draft: false
 category: "Development"
+tag: "#Android"
 ---
 
 ## 들어가기 전에

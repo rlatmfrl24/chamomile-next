@@ -3,6 +3,7 @@ title: Binding Adapter와 Type Converter
 date: 2021-03-08 09:25:84
 category: "Development"
 draft: false
+tag: "#Android #BindingAdapter #TypeConverter"
 ---
 
 ## 개요

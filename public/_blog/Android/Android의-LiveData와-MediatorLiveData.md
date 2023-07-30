@@ -3,6 +3,7 @@ title: Android의 LiveData와 MediatorLiveData
 date: "2019-10-17 00:00:11"
 draft: false
 category: "Development"
+tag: "#Android #LiveData #MediatorLiveData"
 ---
 
 이번에는 AAC 구성요소 중 하나의 LiveData와 MediatorLiveData의 활용범을 정리해보았다.

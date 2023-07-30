@@ -3,6 +3,7 @@ title: Android Fragment와 ViewPager2를 활용한 화면 구성하기
 date: 2020-10-20 16:10:61
 category: "Development"
 draft: false
+tag: "#Android #Fragment #ViewPager2"
 ---
 
 ## 개요

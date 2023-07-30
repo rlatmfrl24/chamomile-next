@@ -3,6 +3,7 @@ title: Retrofit2를 Android에 적용시킬때 알아야하는 것들
 date: 2020-02-18 07:02:51
 category: "Development"
 draft: false
+tag: "#Android #Retrofit2"
 ---
 
 ## 들어가기 전에

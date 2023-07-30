@@ -3,11 +3,12 @@ title: Android Date Picker Dialog 생성하고 적용하기
 date: 2020-10-21 10:10:35
 category: "Development"
 draft: false
+tag: "#Android #MaterialUI #DatePicker"
 ---
 
 ## 개요
 
-Android Vanila 버전은 Date Picker UI를 지원하지 않고 있다. Material UI는 이를 보완하는 Material Design 형식의 Date Picker를 지원하다. 구현 자체는 단순하지만 제대로 문서화 되어있지 않으므로 나중에 활용할 수 있도록 정리해두었다.
+Android Vanilla 버전은 Date Picker UI를 지원하지 않고 있다. Material UI는 이를 보완하는 Material Design 형식의 Date Picker를 지원하다. 구현 자체는 단순하지만 제대로 문서화 되어있지 않으므로 나중에 활용할 수 있도록 정리해두었다.
 
 ## 구현
 

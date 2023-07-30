@@ -3,6 +3,7 @@ title: Android ViewPager2 활용법
 date: "2019-09-26 00:00:11"
 draft: false
 category: "Development"
+tag: "#Android #ViewPager2"
 ---
 
 Android Viewpager는 매우 유용한 기능이지만, 이전 버전에서는 다소 문제가 있어서 AndroidX에는 Viewpager2라는 새로운 패키지가 추가됐다. 화면구성에 매우 유용한 패키지지만 많이 다뤄지지 않아서 특징과 활용법을 다소 정리해보았다.

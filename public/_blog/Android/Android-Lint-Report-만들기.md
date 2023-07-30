@@ -3,6 +3,7 @@ title: Android Lint Report 만들기
 date: "2019-09-17 00:00:11"
 draft: false
 category: "Development"
+tag: "#Android #Lint"
 ---
 
 Android 정적 분석을 위해서 Android Lint를 활용했다. 물론 IDE 내부에서 Lint 결과를 확인할 수 있지만, 별도로 Report를 만드는 기능은 아직 에러가 있기에 이를 위한 팁을 정리해둔다.

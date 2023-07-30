@@ -3,6 +3,7 @@ title: Android RecyclerView에 좌우 Swipe + Backgroud 적용해보기
 date: "2019-10-17 00:00:11"
 draft: false
 category: "Development"
+tag: "#Android #RecyclerView"
 ---
 
 이번에는 RecyclerView에 좌우 Swipe 동작을 적용하면서 텅 빈 배경대신 백그라운드의 표시하도록 만든 Boilerplate이다.

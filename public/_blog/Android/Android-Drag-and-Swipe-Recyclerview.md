@@ -3,6 +3,7 @@ title: Android Drag and Swipe Recyclerview
 date: "2019-09-27 00:00:11"
 draft: false
 category: "Development"
+tag: "#Android #Recyclerview #Drag #Swipe"
 ---
 
 ## Drag and Swipe RecyclerView
