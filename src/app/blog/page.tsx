@@ -25,7 +25,8 @@ function getPostMeta(postPath: string) {
   //get meta data from Markdown file
   //get read lines start with --- and end with ---
   const fileContents = fs.readFileSync(postPath, "utf8");
-  const lines = fileContents.split("\n");
+  const lines = fileContents.split("\r\n");
+
   let meta: any = {};
   let metaStart = false;
   let metaEnd = false;
@@ -50,6 +51,8 @@ function getPostMeta(postPath: string) {
 export default function Blog() {
   const posts = getPostsPath();
   const postMeta = getPostMeta(posts[0]);
+
+  console.log(posts[0]);
   console.log(postMeta);
 
   return (
