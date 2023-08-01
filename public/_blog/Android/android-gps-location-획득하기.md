@@ -1,6 +1,6 @@
 ---
 title: Android GPS Location 획득하기
-date: 2020-10-20 16:10:67
+date: 2020-10-20 16:10:00
 category: "Development"
 draft: false
 tag: "#Android #GPS #Location"

@@ -1,6 +1,6 @@
 ---
 title: Android에서 권한 취득하기
-date: 2020-03-08 13:54:84
+date: 2020-03-08 13:54:00
 category: "Development"
 draft: false
 tag: "#Android #Permission"

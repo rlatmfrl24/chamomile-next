@@ -1,6 +1,6 @@
 ---
 title: Android Project에 Koin 적용하기
-date: 2020-10-21 15:10:89
+date: 2020-10-21 15:10:00
 category: "Development"
 draft: false
 tag: "#Android #Koin"

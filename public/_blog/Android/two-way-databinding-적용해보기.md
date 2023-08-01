@@ -1,6 +1,6 @@
 ---
 title: Two-way Databinding 적용해보기
-date: 2020-10-21 15:10:75
+date: 2020-10-21 15:10:00
 category: "Development"
 draft: false
 tag: "#Android #Databinding"

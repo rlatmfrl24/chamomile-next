@@ -1,6 +1,6 @@
 ---
 title: Material UI를 활용한 Transition 적용하기
-date: 2021-03-08 14:14:84
+date: 2021-03-08 14:14:00
 category: "Development"
 draft: false
 tag: "#Android #MaterialUI #Transition"

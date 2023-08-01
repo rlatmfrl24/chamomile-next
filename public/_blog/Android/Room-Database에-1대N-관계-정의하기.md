@@ -1,6 +1,6 @@
 ---
 title: Room Database에 1:N 관계 정의하기
-date: 2021-03-08 14:10:84
+date: 2021-03-08 14:10:00
 category: "Development"
 draft: false
 tag: "#Android #Room #Database"

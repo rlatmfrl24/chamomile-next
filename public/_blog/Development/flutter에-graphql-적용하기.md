@@ -1,6 +1,6 @@
 ---
 title: Flutter에 GraphQL 적용하기
-date: 2020-03-24 07:03:74
+date: 2020-03-24 07:03:00
 category: Development
 draft: false
 tag: "#Flutter #GraphQL"

@@ -1,6 +1,6 @@
 ---
 title: Navigation API를 활용한 Fragment간 이동 구현
-date: 2021-03-08 11:19:84
+date: 2021-03-08 11:19:00
 category: "Development"
 draft: false
 tag: "#Android #Kotlin #Navigation"
