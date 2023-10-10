@@ -24,7 +24,7 @@ const menuList: MenuItemType[] = [
   {
     id: 4,
     name: "Blog",
-    path: "/blog",
+    path: "https://sulfurbottom.netlify.com",
   },
   {
     id: 5,
