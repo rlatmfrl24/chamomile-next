@@ -13,9 +13,13 @@ function CategoryButton({ categoryType }: { categoryType: BlogCategoryProps }) {
 
   useEffect(() => {
     if (currentCategory.path === categoryType.path) {
-      setButtonClassName("hover:text-blue-400 text-blue-400 font-bold");
+      setButtonClassName(
+        "hover:text-blue-400 text-blue-400 font-bold bg-blue-900 rounded-md px-2 py-1"
+      );
     } else {
-      setButtonClassName("hover:text-blue-400 text-gray-400");
+      setButtonClassName(
+        "hover:text-blue-400 text-gray-400 px-2 py-1 rounded-md"
+      );
     }
   }, [currentCategory, categoryType]);
 
